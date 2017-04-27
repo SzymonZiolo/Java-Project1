@@ -27,9 +27,20 @@ public class Main {
         //library.addBook(book2);
         //library.addBook(book3);
 
+        Book borrowedBook = library.borrow("Ogniem i mieczem");
+
+        System.out.println("Borrowed book: " + borrowedBook.getTitle());
+
         System.out.println(library.allBooks.size());
 
-        book2.getTitle();
+        System.out.println(book2.getTitle());
+
+        Book bookToReturn = borrowedBook;
+
+        boolean returnSuccess =  library.returnBook(bookToReturn);
+
+        System.out.println(returnSuccess);
+
 
     }
 }
